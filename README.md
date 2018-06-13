@@ -11,4 +11,6 @@ I agree with selecting reviews with either one star or five star. Clearly they w
 Turns out that we are left with only 4086 entries with 1/5 star ratings.
 Now comes the task of processing the text to make it useful. To bring it such a form that a machine can make some sense from it. Removing stopwords and punctuations. 
 The idea is to get all the useful unique words and plot them or compare them with each review. CountVectorizer comes in handy. We apply it to the entire set of 4086 entries. From which we get the size of the vocabulary.
-Next we simply use 30 percent of the dataset as our training dataset. And finally we use multinomial Naive Bayes 
+Next we simply use 30 percent of the dataset as our training dataset. And finally we use multinomial Naive Bayes to develop our model and predict the rating of a particular review from the  text.
+Also, we observe that we have a 92% accuracy. But at the same time we are facing data bias issue. Which could be due to multiple factors like: there being more number of reviews with 5 star ratings in comparison to 1 star rating. 
+Finally what I observed what was: in entry 61 the rating was negative and should have got 1 star but it got the opposite because of words like 'happy' appearing thrice in that review but in a negative sense.
